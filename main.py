@@ -25,7 +25,7 @@ APPROVE_CHANNEL = os.environ.get('https://t.me/naruto_support1', None)
 OWNER_USERNAME = os.environ.get('@naruto_of_telegram', None)
 AUCTION_GROUP_LINK = os.environ.get('https://t.me/naruto_support1', None)
 AUCTION_CHANNEL_LINK = os.environ.get('https://t.me/naruto_support1', None)
-START_IMAGE = os.environ.get('START_IMAGE', None)
+START_IMAGE = os.environ.get('https://telegra.ph/file/75a56047c1d073968e1b3.jpg', None)
 START_CAPTION = os.environ.get('hey welcome', None)
 PENDING_CHANNEL_LINK = os.environ.get('https://t.me/naruto_support1', None)
 APPROVED_CHANNEL_LINK = os.environ.get('https://t.me/naruto_support1', None)
@@ -96,8 +96,8 @@ async def submitcb(event):
             Button.url('DIRECT DEPLOY', 'https://heroku.com/deploy?template=https://github.com/usaop33/auctionbot')
         ],
         [
-            Button.url('OWNER', 'https://t.me/gojoxsatrou'),
-            Button.url('X MOD', 'https://t.me/xmodnews')
+            Button.url('OWNER', 'https://t.me/naruto_of_telegram'),
+            Button.url('X MOD', 'https://t.me/naruto_support1')
         ],
         [
             Button.inline('Back', 'BAMCK')
