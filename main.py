@@ -73,6 +73,7 @@ else:
 # Convert other variables to strings if needed
 START_CAPTION = str(START_CAPTION)
 COMMUNITY_LINK = str(COMMUNITY_LINK)
+OWNER_USERNAME = OWNER_USERNAME if OWNER_USERNAME is not None else ""
 OWNER_LINK = 'https://t.me/' + OWNER_USERNAME
 OWNER_LINK = str(OWNER_LINK)
 AUCTION_CHANNEL_LINK = str(AUCTION_CHANNEL_LINK)
@@ -80,6 +81,7 @@ AUCTION_GROUP_LINK = str(AUCTION_GROUP_LINK)
 
 dxgays = ENEMY_LIST
 xmods = APPROVE_LIST
+
 
 
 client = TelegramClient('aucbot', api_id, api_hash).start(bot_token=bot_token)
