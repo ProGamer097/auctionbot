@@ -39,10 +39,16 @@ ENEMY_LIST = set(int(x) for x in os.environ.get("ENEMY_LIST", "").split())
 api_id = API_ID
 api_hash = API_HASH
 bot_token = TOKEN
-log_channel = PENDING_CHANNEL  # Assuming this is where you're getting the NoneType error
+log_channel = PENDING_CHANNEL  
 post_channel = POST_CHANNEL
-log_channel = int(log_channel) if log_channel is not None else None  # Check if log_channel is not None before converting to int
-post_channel = int(post_channel)
+
+# Check if post_channel is not None before converting to int
+if post_channel is not None:
+    post_channel = int(post_channel)
+else:
+    # Handle the case where post_channel is None
+    post_channel = None
+  
 scammer_channel = int(SCAMMER_CHANNEL)
 reject_channel = int(REJECT_CHANNEL)
 approve_channel = int(APPROVE_CHANNEL)
@@ -52,8 +58,10 @@ OWNER_LINK = 'https://t.me/' + OWNER_USERNAME
 OWNER_LINK = str(OWNER_LINK)
 AUCTION_CHANNEL_LINK = str(AUCTION_CHANNEL_LINK)
 AUCTION_GROUP_LINK = str(AUCTION_GROUP_LINK)
+
 dxgays = ENEMY_LIST
 xmods = APPROVE_LIST
+
 
 client = TelegramClient('aucbot', api_id, api_hash).start(bot_token=bot_token)
 
