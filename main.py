@@ -48,10 +48,29 @@ if post_channel is not None:
 else:
     # Handle the case where post_channel is None
     post_channel = None
-  
-scammer_channel = int(SCAMMER_CHANNEL)
-reject_channel = int(REJECT_CHANNEL)
-approve_channel = int(APPROVE_CHANNEL)
+
+# Check if SCAMMER_CHANNEL is not None before converting to int
+if SCAMMER_CHANNEL is not None:
+    scammer_channel = int(SCAMMER_CHANNEL)
+else:
+    # Handle the case where SCAMMER_CHANNEL is None
+    scammer_channel = None
+
+# Check if REJECT_CHANNEL is not None before converting to int
+if REJECT_CHANNEL is not None:
+    reject_channel = int(REJECT_CHANNEL)
+else:
+    # Handle the case where REJECT_CHANNEL is None
+    reject_channel = None
+
+# Check if APPROVE_CHANNEL is not None before converting to int
+if APPROVE_CHANNEL is not None:
+    approve_channel = int(APPROVE_CHANNEL)
+else:
+    # Handle the case where APPROVE_CHANNEL is None
+    approve_channel = None
+
+# Convert other variables to strings if needed
 START_CAPTION = str(START_CAPTION)
 COMMUNITY_LINK = str(COMMUNITY_LINK)
 OWNER_LINK = 'https://t.me/' + OWNER_USERNAME
