@@ -14,15 +14,15 @@ from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin
 from telethon.tl.types import ChannelParticipantCreator
 
-API_ID = os.environ.get('API_ID', None)
-API_HASH = os.environ.get('API_HASH', None)
-TOKEN = os.environ.get('TOKEN', None)
+API_ID = os.environ.get('20457610', None)
+API_HASH = os.environ.get('b7de0dfecd19375d3f84dbedaeb92537', None)
+TOKEN = os.environ.get('7028270645:AAGycNC2TPRfyujZQZMDiVsiRPMriXrz9jI', None)
 PENDING_CHANNEL = os.environ.get('https://t.me/naruto_support1', None)
 POST_CHANNEL = os.environ.get('https://t.me/naruto_support1', None)
 SCAMMER_CHANNEL = os.environ.get('https://t.me/naruto_support1', None)
 REJECT_CHANNEL = os.environ.get('https://t.me/naruto_support1', None)
 APPROVE_CHANNEL = os.environ.get('https://t.me/naruto_support1', None)
-OWNER_USERNAME = os.environ.get('OWNER_USERNAME', None)
+OWNER_USERNAME = os.environ.get('@naruto_of_telegram', None)
 AUCTION_GROUP_LINK = os.environ.get('https://t.me/naruto_support1', None)
 AUCTION_CHANNEL_LINK = os.environ.get('https://t.me/naruto_support1', None)
 START_IMAGE = os.environ.get('START_IMAGE', None)
