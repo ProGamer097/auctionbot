@@ -36,29 +36,28 @@ COMMUNITY_LINK = os.environ.get('COMMUNITY_LINK', None)
 APPROVE_LIST = set(int(x) for x in os.environ.get("APPROVE_LIST", "").split())
 ENEMY_LIST = set(int(x) for x in os.environ.get("ENEMY_LIST", "").split())
 
-
 api_id = API_ID
 api_hash = API_HASH
 bot_token = TOKEN
-log_channel = PENDING_CHANNEL
+log_channel = PENDING_CHANNEL  # Assuming this is where you're getting the NoneType error
 post_channel = POST_CHANNEL
-log_channel = int(log_channel)
+log_channel = int(log_channel) if log_channel is not None else None  # Check if log_channel is not None before converting to int
 post_channel = int(post_channel)
 scammer_channel = int(SCAMMER_CHANNEL)
 reject_channel = int(REJECT_CHANNEL)
 approve_channel = int(APPROVE_CHANNEL)
 START_CAPTION = str(START_CAPTION)
 COMMUNITY_LINK = str(COMMUNITY_LINK)
-OWNER_LINK = 'https://t.me/'+OWNER_USERNAME
+OWNER_LINK = 'https://t.me/' + OWNER_USERNAME
 OWNER_LINK = str(OWNER_LINK)
 AUCTION_CHANNEL_LINK = str(AUCTION_CHANNEL_LINK)
 AUCTION_GROUP_LINK = str(AUCTION_GROUP_LINK)
 dxgays = ENEMY_LIST
 xmods = APPROVE_LIST
 
-client = TelegramClient('aucbot', api_id, api_hash).start(bot_token=bot_token) #i dont really understand it lol but without this bot wont work
+client = TelegramClient('aucbot', api_id, api_hash).start(bot_token=bot_token)
 
-logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s', #copy pasted from telethon docs lol..... so usually it logs error
+logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
 
 
