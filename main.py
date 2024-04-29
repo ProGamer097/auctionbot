@@ -82,8 +82,7 @@ AUCTION_GROUP_LINK = str(AUCTION_GROUP_LINK)
 dxgays = ENEMY_LIST
 xmods = APPROVE_LIST
 
-
-client = TelegramClient('aucbot', 20457610,b7de0dfecd19375d3f84dbedaeb92537).start(7028270645:AAGycNC2TPRfyujZQZMDiVsiRPMriXrz9jI)
+client = TelegramClient('aucbot', '20457610', 'b7de0dfecd19375d3f84dbedaeb92537').start('7028270645:AAGycNC2TPRfyujZQZMDiVsiRPMriXrz9jI')
 
 # Set up logging
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
