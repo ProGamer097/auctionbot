@@ -82,16 +82,8 @@ AUCTION_GROUP_LINK = str(AUCTION_GROUP_LINK)
 dxgays = ENEMY_LIST
 xmods = APPROVE_LIST
 
-# Check if API_ID and API_HASH are not empty or None
-if not API_ID or not API_HASH:
-    raise ValueError("API ID or Hash cannot be empty or None")
 
-# Check if bot_token is not empty or None
-if not bot_token:
-    raise ValueError("Bot token cannot be empty or None")
-
-# Initialize the Telegram client
-client = TelegramClient('aucbot', api_id, api_hash).start(bot_token=bot_token)
+client = TelegramClient('aucbot', 20457610,b7de0dfecd19375d3f84dbedaeb92537).start(7028270645:AAGycNC2TPRfyujZQZMDiVsiRPMriXrz9jI)
 
 # Set up logging
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
