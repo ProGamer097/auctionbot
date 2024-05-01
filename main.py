@@ -881,9 +881,6 @@ async def auction_off_handler(event):
 dot_count = 0
 
 
-import asyncio
-
-
 @client.on(events.NewMessage)
 async def auto_count_handler(event):
 
@@ -909,8 +906,6 @@ async def auto_count_handler(event):
 
         await asyncio.sleep(1)  
         await sent_message.edit('... /sold ')
-
-from telethon.tl.types import ChannelParticipantsAdmins
 
 
 @client.on(events.NewMessage(pattern='/sold'))
