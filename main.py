@@ -87,17 +87,17 @@ async def start(event):
 
 @client.on(events.CallbackQuery(data='ABOUT'))
 async def submitcb(event):
-    await client.edit_message(event.sender_id, event.message_id, "Hey!\nMy developer - @GOJOXSATROU\n\nDo you want to make a similar bot?\n~Check the buttons given below", 
+    await client.edit_message(event.sender_id, event.message_id, "Hey!\nMy developer - @naruto_of_telegram\n\nDo you want to make a similar bot?\n~Check the buttons given below", 
         buttons=[
         [
-            Button.url('CODES', 'https://github.com/usaop33/auctionbot')
+            Button.url('CODES', 'https://github.com/ProGamer097/auctionbot')
         ],
         [
-            Button.url('DIRECT DEPLOY', 'https://heroku.com/deploy?template=https://github.com/usaop33/auctionbot')
+            Button.url('DIRECT DEPLOY', 'https://heroku.com/deploy?template=https://github.com/ProGamer097/auctionbot')
         ],
         [
-            Button.url('OWNER', 'https://t.me/gojoxsatrou'),
-            Button.url('X MOD', 'https://t.me/xmodnews')
+            Button.url('OWNER', 'https://t.me/naruto_of_telegram'),
+            Button.url('X MOD', 'https://t.me/Narut_support1')
         ],
         [
             Button.inline('Back', 'BAMCK')
