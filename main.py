@@ -14,77 +14,51 @@ from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin
 from telethon.tl.types import ChannelParticipantCreator
 
-API_ID = os.environ.get('20457610', None)
-API_HASH = os.environ.get('b7de0dfecd19375d3f84dbedaeb92537', None)
-TOKEN = os.environ.get('7028270645:AAGycNC2TPRfyujZQZMDiVsiRPMriXrz9jI', None)
-PENDING_CHANNEL = os.environ.get('https://t.me/naruto_support1', None)
-POST_CHANNEL = os.environ.get('https://t.me/naruto_support1', None)
-SCAMMER_CHANNEL = os.environ.get('https://t.me/naruto_support1', None)
-REJECT_CHANNEL = os.environ.get('https://t.me/naruto_support1', None)
-APPROVE_CHANNEL = os.environ.get('https://t.me/naruto_support1', None)
-OWNER_USERNAME = os.environ.get('@naruto_of_telegram', None)
-AUCTION_GROUP_LINK = os.environ.get('https://t.me/naruto_support1', None)
-AUCTION_CHANNEL_LINK = os.environ.get('https://t.me/naruto_support1', None)
-START_IMAGE = os.environ.get('https://telegra.ph/file/75a56047c1d073968e1b3.jpg', None)
-START_CAPTION = os.environ.get('hey welcome', None)
-PENDING_CHANNEL_LINK = os.environ.get('https://t.me/naruto_support1', None)
-APPROVED_CHANNEL_LINK = os.environ.get('https://t.me/naruto_support1', None)
-REJECTED_CHANNEL_LINK = os.environ.get('https://t.me/naruto_support1', None)
-SCAMMER_CHANNEL_LINK = os.environ.get('https://t.me/naruto_support1', None)
+API_ID = os.environ.get('API_ID', None)
+API_HASH = os.environ.get('API_HASH', None)
+TOKEN = os.environ.get('TOKEN', None)
+PENDING_CHANNEL = os.environ.get('PENDING_CHANNEL', None)
+POST_CHANNEL = os.environ.get('POST_CHANNEL', None)
+SCAMMER_CHANNEL = os.environ.get('SCAMMER_CHANNEL', None)
+REJECT_CHANNEL = os.environ.get('REJECT_CHANNEL', None)
+APPROVE_CHANNEL = os.environ.get('APPROVE_CHANNEL', None)
+OWNER_USERNAME = os.environ.get('OWNER_USERNAME', None)
+AUCTION_GROUP_LINK = os.environ.get('AUCTION_GROUP_LINK', None)
+AUCTION_CHANNEL_LINK = os.environ.get('AUCTION_CHANNEL_LINK', None)
+START_IMAGE = os.environ.get('START_IMAGE', None)
+START_CAPTION = os.environ.get('START_CAPTION', None)
+PENDING_CHANNEL_LINK = os.environ.get('PENDING_CHANNEL_LINK', None)
+APPROVED_CHANNEL_LINK = os.environ.get('APPROVED_CHANNEL_LINK', None)
+REJECTED_CHANNEL_LINK = os.environ.get('REJECTED_CHANNEL_LINK', None)
+SCAMMER_CHANNEL_LINK = os.environ.get('SCAMMER_CHANNEL_LINK', None)
 COMMUNITY_NAME = os.environ.get('COMMUNITY_NAME', None)
 COMMUNITY_LINK = os.environ.get('COMMUNITY_LINK', None)
 APPROVE_LIST = set(int(x) for x in os.environ.get("APPROVE_LIST", "").split())
 ENEMY_LIST = set(int(x) for x in os.environ.get("ENEMY_LIST", "").split())
 
+
 api_id = API_ID
 api_hash = API_HASH
 bot_token = TOKEN
-log_channel = PENDING_CHANNEL  
+log_channel = PENDING_CHANNEL
 post_channel = POST_CHANNEL
-
-# Check if post_channel is not None before converting to int
-if post_channel is not None:
-    post_channel = int(post_channel)
-else:
-    # Handle the case where post_channel is None
-    post_channel = None
-
-# Check if SCAMMER_CHANNEL is not None before converting to int
-if SCAMMER_CHANNEL is not None:
-    scammer_channel = int(SCAMMER_CHANNEL)
-else:
-    # Handle the case where SCAMMER_CHANNEL is None
-    scammer_channel = None
-
-# Check if REJECT_CHANNEL is not None before converting to int
-if REJECT_CHANNEL is not None:
-    reject_channel = int(REJECT_CHANNEL)
-else:
-    # Handle the case where REJECT_CHANNEL is None
-    reject_channel = None
-
-# Check if APPROVE_CHANNEL is not None before converting to int
-if APPROVE_CHANNEL is not None:
-    approve_channel = int(APPROVE_CHANNEL)
-else:
-    # Handle the case where APPROVE_CHANNEL is None
-    approve_channel = None
-
-# Convert other variables to strings if needed
+log_channel = int(log_channel)
+post_channel = int(post_channel)
+scammer_channel = int(SCAMMER_CHANNEL)
+reject_channel = int(REJECT_CHANNEL)
+approve_channel = int(APPROVE_CHANNEL)
 START_CAPTION = str(START_CAPTION)
 COMMUNITY_LINK = str(COMMUNITY_LINK)
-OWNER_USERNAME = OWNER_USERNAME if OWNER_USERNAME is not None else ""
-OWNER_LINK = 'https://t.me/' + OWNER_USERNAME
+OWNER_LINK = 'https://t.me/'+OWNER_USERNAME
 OWNER_LINK = str(OWNER_LINK)
 AUCTION_CHANNEL_LINK = str(AUCTION_CHANNEL_LINK)
 AUCTION_GROUP_LINK = str(AUCTION_GROUP_LINK)
-
 dxgays = ENEMY_LIST
 xmods = APPROVE_LIST
 
+client = TelegramClient('aucbot', api_id, api_hash).start(bot_token=bot_token) #i dont really understand it lol but without this bot wont work
 
-# Set up logging
-logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
+logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s', #copy pasted from telethon docs lol..... so usually it logs error
                     level=logging.WARNING)
 
 
@@ -122,8 +96,8 @@ async def submitcb(event):
             Button.url('DIRECT DEPLOY', 'https://heroku.com/deploy?template=https://github.com/usaop33/auctionbot')
         ],
         [
-            Button.url('OWNER', 'https://t.me/naruto_of_telegram'),
-            Button.url('X MOD', 'https://t.me/naruto_support1')
+            Button.url('OWNER', 'https://t.me/gojoxsatrou'),
+            Button.url('X MOD', 'https://t.me/xmodnews')
         ],
         [
             Button.inline('Back', 'BAMCK')
