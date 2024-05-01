@@ -808,19 +808,19 @@ async def start(event):
 
 
 # Get the username or ID of the user who sent the replied-to message
-user_identifier = "@" + replied_message.sender.username if replied_message.sender.username else replied_message.sender_id
+        user_identifier = "@" + replied_message.sender.username if replied_message.sender.username else replied_message.sender_id
 
 # Include the replied-to message's content in the sold message
-replied_message_content = replied_message.text
+        replied_message_content = replied_message.text
 
 # Construct the sold message
-sold_message = f"Item sold to {user_identifier} in {replied_message_content}: {custom_message}"
+        sold_message = f"Item sold to {user_identifier} in {replied_message_content}: {custom_message}"
 
 # Reply to the original message to indicate the item is sold
-sold_reply = await replied_message.reply(sold_message)
+        sold_reply = await replied_message.reply(sold_message)
 
 # Pin the sold message
-await client.pin_message(event.chat_id, sold_reply.id)
+        await client.pin_message(event.chat_id, sold_reply.id)
 
 # Create the unsold_handler event handler for the /unsold command
 # Update the unsold_handler event handler for the /unsold command to send a standalone message
@@ -889,16 +889,16 @@ async def auto_count_handler(event):
 
     if message_text == '.' and str(event.sender_id) in admin_ids:
      
-        sent_message = await event.reply('▫️')
+        sent_message = await event.reply('â–«ï¸')
         await asyncio.sleep(1)
 
-        await sent_message.edit('▫️▫️')
+        await sent_message.edit('â–«ï¸â–«ï¸')
         await asyncio.sleep(2)
 
-        await sent_message.edit('▫️▫️▫️')
+        await sent_message.edit('â–«ï¸â–«ï¸â–«ï¸')
         await asyncio.sleep(2)  
 
-        await sent_message.edit('▫️▫️▫️▫️')
+        await sent_message.edit('â–«ï¸â–«ï¸â–«ï¸â–«ï¸')
 
         await asyncio.sleep(1)  
         await sent_message.edit('... /sold ')
@@ -953,6 +953,6 @@ async def unsold_handler(event):
     else:
         await event.reply("Please provide the player's name in the /unsold command.")
   
-            
+    
 client.start()
 client.run_until_disconnected()
