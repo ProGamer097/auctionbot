@@ -7,7 +7,7 @@
 </h2>
 <br>
 <h3>
-OWNER - <a href = "https://t.me/gojoxsatrou">GOJOXSATROU </a>
+OWNER - <a href = "https://t.me/naruto_of_telegrnaruto  </a>
 </h3>
 <h3>
 POWERED BY <a href = "https://t.me/xmodnews">X MOD</a>
@@ -21,7 +21,7 @@ NOTE :- No need to fork you can directly deploy easily</h2>
 
 
 <br>
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/usaop33/auctionbot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=for-the-badge&logo=heroku" width="300" height="50"/></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/ProGamer097/auctionbot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=for-the-badge&logo=heroku" width="300" height="50"/></a></p>
 
 
 <br><h2>FEATURES</h2> <ol type="1">
