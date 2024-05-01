@@ -807,7 +807,7 @@ async def start(event):
         await client.send_message(event.sender_id, TOKEN)
 
 # Get the username or ID of the user who sent the replied-to message
-    user_identifier = "@" + replied_message.sender.username if replied_message.sender.username else replied_message.sender_id
+user_identifier = "@" + replied_message.sender.username if replied_message.sender.username else replied_message.sender_id
 
     # Include the replied-to message's content in the sold message
     replied_message_content = replied_message.text
