@@ -50,9 +50,9 @@ approve_channel = int(-1002083898719)
 START_CAPTION = str(START_CAPTION)
 COMMUNITY_LINK = str(-1002083898719)
 OWNER_LINK = 'https://t.me/'+OWNER_USERNAME
-OWNER_LINK = str(https://t.me/Naruto_of_telegram)
-AUCTION_CHANNEL_LINK = str(https://t.me/naruto_support1)
-AUCTION_GROUP_LINK = str(https://t.me/naruto_support1)
+OWNER_LINK = str("https://t.me/Naruto_of_telegram")
+AUCTION_CHANNEL_LINK = str("https://t.me/naruto_support1")
+AUCTION_GROUP_LINK = str("https://t.me/naruto_support1")
 dxgays = ENEMY_LIST
 xmods = APPROVE_LIST
 
