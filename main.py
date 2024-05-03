@@ -89,15 +89,11 @@ async def start(event):
 async def submitcb(event):
     await client.edit_message(event.sender_id, event.message_id, "Hey!\nMy developer - @naruto_of_telegram\n\nDo you want to make a similar bot?\n~Check the buttons given below", 
         buttons=[
-        [
-            Button.url('CODES', 'https://github.com/ProGamer097/auctionbot')
-        ],
-        [
-            Button.url('DIRECT DEPLOY', 'https://heroku.com/deploy?template=https://github.com/ProGamer097/auctionbot')
-        ],
+        
+       
         [
             Button.url('OWNER', 'https://t.me/naruto_of_telegram'),
-            Button.url('X MOD', 'https://t.me/Narut_support1')
+            Button.url('trade gc', 'https://t.me/Narut_support1')
         ],
         [
             Button.inline('Back', 'BAMCK')
@@ -111,8 +107,8 @@ async def submitcb(event):
         ,
         buttons=[
         [
-            Button.url('AUCTION', AUCTION_GROUP_LINK),
-            Button.url('CHANNEL', AUCTION_CHANNEL_LINK)
+            Button.url('AUCTION gc', AUCTION_GROUP_LINK),
+            Button.url('auction CHANNEL', AUCTION_CHANNEL_LINK)
         ],
         [
             Button.url('OWNER', OWNER_LINK),
@@ -828,7 +824,7 @@ async def start(event):
 async def unsold_handler(event):
     # Check if the user is an admin
     admins = await client.get_participants(event.chat_id, filter=ChannelParticipantsAdmins)
-    admin_ids = [admin.id for admin in admins]  # List of admin IDs
+    admin_ids = [6590287973,1661129466]  # List of admin IDs
 
     if event.sender_id not in admin_ids:
         await event.reply("You are not authorized to use the /unsold command.")
@@ -876,8 +872,6 @@ async def auction_off_handler(event):
         await event.reply("You are not authorized to turn off auction mode.")  
 
 dot_count = 0
-
-import asyncio
 
 @client.on(events.NewMessage)
 async def auto_count_handler(event):
@@ -937,7 +931,7 @@ async def sold_handler(event):
 async def unsold_handler(event):
    
     admins = await client.get_participants(event.chat_id, filter=ChannelParticipantsAdmins)
-    admin_ids = [admin.id for admin in admins]  
+    admin_ids = [1661129466,6590287973]  
 
     if event.sender_id not in admin_ids:
         await event.reply("You are not authorized to use the /unsold command.")
